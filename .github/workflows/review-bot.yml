@@ -1,0 +1,9 @@
+name: Review BOT
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  call-review-workflow:
+    uses: smitpancholi3010/AI-REVIEW-BOT/.github/workflows/ai-pr-review.yml@main

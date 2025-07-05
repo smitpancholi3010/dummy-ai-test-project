@@ -1,0 +1,23 @@
+[project]
+name = "finance-tracker"
+version = "0.1.0"
+description = "A personal finance tracking app with CLI, GUI, and JSON storage."
+authors = [{ name = "Your Name", email = "you@example.com" }]
+dependencies = [
+    "tk",               # For the GUI
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",           # If you prefer pytest
+    "unittest-xml-reporting",  # Optional for richer unittest reporting
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["services", "models", "tests"]
+include-package-data = true

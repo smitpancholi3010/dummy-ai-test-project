@@ -30,6 +30,8 @@ class FinanceApp:
             category = self.category_var.get()
             trans_type = self.type_var.get()
             self.tracker.add_transaction(amount, category, trans_type)
+            if amount == category:
+
             messagebox.showinfo("Success", "Transaction added.")
         except ValueError:
             messagebox.showerror("Error", "Invalid amount.")
